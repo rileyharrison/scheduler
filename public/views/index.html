@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meal Planner</title>
+        <link rel="stylesheet" href="/assets/styles/style.css">
+
+        <script type="text/javascript" src="/vendors/angular.min.js"></script>
+        <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+        <div class = "login-wrapper">
+
+
+        <div class="instructions">
+            <div class="container">
+                <h1 class="lead">Meal Planner Login</h1>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Set form action and method -->
+            <form action="/" method="post">
+                <div>
+                    <label for="username">Username:</label>
+                    <input class = "login-text" type="text" name="username" id="username"/>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input class = "login-text" type="password" name="password" id="password"/>
+                </div>
+                <div>
+                    <input type="submit" value="Log In"/>
+                    <a href="/register">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,348 @@
+
+body{
+    font-family: Century Gothic, sans-serif;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    font-size: 12px;
+    color: #0047b3;
+    margin:0;
+    padding:0;
+    background-image: url("/images/food.jpg");
+    background-size: 100%;
+    line-height: 50%;
+
+
+}
+p{
+    margin: 5px;
+}
+
+option[selected] {
+    color: #0047b3;
+}
+.list-date{
+    font-weight: bold;
+
+}
+.login-wrapper{
+    line-height: 60%;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 5px;
+     background-color: #ffffff;
+     border-style: none;
+     width: 20%;
+     height: 10%;
+     margin-left: 40%;
+     margin-top: 10%;
+}
+.login-text{
+    width: 80%;
+    margin: 5px;
+}
+.list-ingredients{
+    line-height: 30%;
+}
+.list-day{
+    margin-bottom: 10px;
+}
+.list-me{
+    margin: 0;
+    margin-left: 20px;
+
+
+
+
+    width: 40px;
+    color: #00b33c;
+    border-style: none;
+    background-color: #ccffdd;
+    border-radius: 5px;
+    padding: 0px;
+
+}
+.planner{
+    background-color: grey;
+
+
+}
+
+.week-nav{
+    width: 98%;
+    margin-left: 1%;
+
+
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+
+
+}
+
+
+.edit-block{
+    opacity: .9;
+    line-height: 60%;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 5px;
+     background-color: #e6f7ff;
+     border-style: none;
+
+}
+.edit-text{
+    width: 90%;
+    color: #0047b3;
+    border-color:#cce0ff;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 2px;
+    margin-left: 5px;
+
+/*
+    border: none;
+*/
+}
+
+
+.edit-instructions{
+    height: 200px;
+    width: 90%;
+}
+
+
+.meal-pick{
+    opacity: .9;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: #e6f7ff;
+    color: #0047b3;
+
+}
+.pick-cook{
+    opacity: .9;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: #e6f7ff;
+    color: #0047b3;
+
+
+}
+.food-list{
+    background-color: #ffffff;
+    width: 90%;
+    border-style: none;
+    margin-left: 5px;
+
+
+}
+.list-container{
+
+
+    width: 20%;
+    float: left;
+    height: 1000px;
+    border-style: none;
+
+
+
+
+}
+.week-container{
+    width: 40%;
+    float: left;
+    height: 1000px;
+    border-style: none;
+
+
+
+
+
+}
+.meal-container{
+    width: 20%;
+    float: left;
+    height: 1000px;
+    border-style: none;
+
+
+
+
+
+}
+.edit-container{
+    width: 20%;
+    float: right;
+    height: 1000px;
+    border-style: none;
+
+
+
+
+
+}
+.shopping-list{
+    opacity: .9;
+    border-radius: 5px;
+    margin: 5px;
+     line-height: 100%;
+     padding: 2px;
+     background-color: #e6f7ff;
+
+     border-style: none;
+
+}
+.shopping-list p{
+}
+.meal-box-col{
+
+
+}
+.meal-edit-col{
+
+
+
+
+}
+
+.week-day  {
+    opacity: .9;
+    line-height: 40%;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 5px;
+     background-color:  #e6f7ff;
+     border-style: none;
+
+
+}
+.day-unlisted{
+    background-color:  #e6ffee;
+}
+.day-line{
+
+
+}
+.grab-meal{
+
+    float: right;
+    width: 70px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.clear-meal{
+
+    float: right;
+    width: 70px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+    text-align: left;
+    padding-left: 5px;
+}
+.grab-meal:disabled {
+    color: #80b3ff;
+}
+.new-meal{
+
+    float: left;
+    width: 80px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+}
+.meal-nav{
+
+    margin-right: 5px;
+    width: 40px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.unlist{
+    float: right;
+    width: 60px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+
+
+}
+.add-food{
+    width: 60px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+
+}
+.pop-food{
+    float: left;
+    width: 20px;
+    color: #0047b3;
+    border-style: none;
+    background-color: #cce0ff;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+
+.breakfasts{
+    width: 300 px;
+
+}
+.lunches{
+    width: 300 px;
+
+
+}
+.dinners{
+    width: 300 px;
+
+
+}
+
+
+
+
+
+
+
+
+.week-day{
+    border-style: none;
+
+}
+
+.meal-box-col{
+
+
+}
+.meal-edit-col{
+
+
+
+}

@@ -1,0 +1,53 @@
+
+<!-- ng-disabled for "slide in a meal" buttons when each meal is selected.
+// select of meal makes each one selected.
+// if deleted, selected reset. getmeals()?
+// one week range. Array of dates. week start variable, reset by next or prev.
+// getDates or getDays is an sql statement for the week.
+// when a meal is "slid" in, check if date exists . If exists, update, else insert.
+// figure out schema for tbl_dates
+// date, breakfast_meal, breakfast_cook, in_list
+// get dates populates one week array of objects. Store id if is one, empty if not.
+// This is how we can check if exists for update or insert.
+-->
+<button ng-click = "prevWeek()" class = "week-nav">Prev</button>
+
+<div ng-class="{ 'day-unlisted': !day.in_list   }" ng-repeat="day  in arrWeek" class = "week-day">
+    <p>{{day.meal_date}}<button class = "list-me" ng-click = "listDay(day.id)" ng-show = "!day.in_list && day.id ">list</button></p>
+    <div class = "day-line"  >
+        <select class = "pick-cook" ng-model="day.breakfast_cook_id" name = "breakfast_cook"  ng-change = "setBreakfastCook(day.breakfast_cook_id, day.id)" ng-disabled = "!day.breakfast_id">
+
+
+            <option ng-repeat="cook in arrCooks" value="{{cook.cook_id}}">{{cook.cook_label}}</option>
+        </select>
+
+        <span ng-click="editMeal(day.breakfast_id,'breakfast')" class = "week-meal-span" >Breakfast: {{day.breakfast_label}}</span>
+        <button class = "grab-meal" ng-click = "grabBreakfast(day.meal_date, day.id)" ng-disabled = "!breakfast_id" ng-show = "!day.breakfast_id">+ Breakfast</button>
+        <button class = "clear-meal" ng-click = "clearMeal(day.id, 'breakfast')"   ng-show = "day.breakfast_id">- Breakfast</button>
+    </div>
+    <div class = "day-line"  >
+        <select  class = "pick-cook" ng-model="day.lunch_cook_id" name = "lunch_cook"  ng-change = "setLunchCook(day.lunch_cook_id, day.id)" ng-disabled = "!day.lunch_id">
+
+
+            <option ng-repeat="cook in arrCooks" value="{{cook.cook_id}}">{{cook.cook_label}}</option>
+        </select>
+
+        <span ng-click="editMeal(day.lunch_id,'lunch')" class = "week-meal-span" >Lunch: {{day.lunch_label}}</span>
+        <button class = "grab-meal" ng-click = "grabLunch(day.meal_date, day.id)" ng-disabled = "!lunch_id" ng-show = "!day.lunch_id" >+ Lunch</button>
+        <button class = "clear-meal" ng-click = "clearMeal(day.id, 'lunch')"   ng-show = "day.lunch_id">- Lunch</button>
+
+    </div>
+    <div class = "day-line" >
+        <select  class = "pick-cook" ng-model="day.dinner_cook_id" name = "dinner_cook"  ng-change = "setDinnerCook(day.dinner_cook_id, day.id)" ng-disabled = "!day.dinner_id">
+
+
+            <option ng-repeat="cook in arrCooks" value="{{cook.cook_id}}">{{cook.cook_label}}</option>
+        </select>
+
+        <span ng-click="editMeal(day.dinner_id,'dinner')" class = "week-meal-span" >Dinner: {{day.dinner_label}}</span>
+        <button class = "grab-meal" ng-click = "grabDinner(day.meal_date, day.id)" ng-disabled = "!dinner_id" ng-show = "!day.dinner_id">+ Dinner</button>
+        <button class = "clear-meal" ng-click = "clearMeal(day.id, 'dinner')"   ng-show = "day.dinner_id">- Dinner</button>
+
+    </div>
+</div>
+<button ng-click = "nextWeek()" class = "week-nav">Next</button>
